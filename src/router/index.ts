@@ -7,13 +7,33 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('@/views/MainPage/mainPage.vue')
+      component: () => import('@/views/MainPage/mainPage.vue'),
+      children: [{
+        path: '/',
+        name: 'index',
+        component: () => import('@/views/IndexPage/indexPage.vue')
+      },{
+        path: '/usermanage',
+        name: 'usermanage',
+        component: ()=> import('@/views/System/UserManage/userManage.vue')
+      },
+      {
+        path: '/manager',
+        name: 'manager',
+        component: () => import('@/views/System/SystemManage/SystemManage.vue')
+      },
+      {
+        path: '/policy',
+        name: 'policy',
+        component: () => import('@/views/System/PolicyManage/PolicyManage.vue')
+      },]
     },
     {
       path: '/login',
       name: 'login',
       component: () => import('@/views/LoginRegister/loginRegister.vue')
     },
+    
   ]
 })
 
