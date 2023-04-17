@@ -16,6 +16,8 @@
 import { defineComponent } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import asidecom from '@/components/Aside/asideCom.vue'
+import {useuUserInfoStore} from '@/stores/userInfo'
+import router from '@/router/index'
 
 export default defineComponent({
   name: 'mainPage',
@@ -23,9 +25,11 @@ export default defineComponent({
     asidecom
   },
   setup(){
-    let msg:string = 'Hello World!'
-    return {
-      msg
+    const {isLogin} = useuUserInfoStore()
+    if (isLogin == false){
+      router.push({
+        path: 'login',
+      })
     }
   }
 })
