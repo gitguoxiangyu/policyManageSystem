@@ -31,7 +31,7 @@
     <el-table-column prop="email" label="用户邮箱"/>
     <el-table-column fixed="right" label="Operations" width="120">
       <template #default>
-        <el-button link type="primary" size="small">删除</el-button>
+        <!-- <el-button link type="primary" size="small">删除</el-button> -->
       </template>
     </el-table-column>
   </el-table>

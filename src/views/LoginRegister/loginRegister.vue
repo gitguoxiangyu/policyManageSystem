@@ -19,7 +19,6 @@
 <script lang="ts">
 import { defineComponent, reactive } from 'vue'
 import { adminLogin } from '@/api/loginRegister/request'
-import router from '@/router'
 import {useuUserInfoStore} from '@/stores/userInfo'
 
 export default defineComponent({
@@ -33,9 +32,7 @@ export default defineComponent({
     const submit = ()=>{
       adminLogin(form).then(()=>{
         login()
-        router.push({
-          path: '/'
-        })
+        
       });
     }
     return {

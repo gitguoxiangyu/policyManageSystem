@@ -7,9 +7,9 @@
 
     <el-table-column fixed="right" label="Operations" width="160">
       <template #default>
-        <el-button link type="primary" size="small" @click="handleClick">编辑权限</el-button>
+        <!-- <el-button link type="primary" size="small" @click="handleClick">编辑权限</el-button>
         <el-button link type="primary" size="small">编辑</el-button>
-        <el-button link type="primary" size="small">删除</el-button>
+        <el-button link type="primary" size="small">删除</el-button> -->
       </template>
     </el-table-column>
   </el-table>
